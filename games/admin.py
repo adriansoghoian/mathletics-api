@@ -9,7 +9,7 @@ class GameAdmin(admin.ModelAdmin):
 
 
 class StatisticsAdmin(admin.ModelAdmin):
-	list_display = ('game', 'game__game_type', 'game__user', 'create_date', 'modified_date', 'start_time', 'end_time', 'number_correct', 'number_incorrect')
+	list_display = ('game', 'create_date', 'modified_date', 'start_time', 'end_time', 'number_correct', 'number_incorrect')
 	search_fields = ['game', 'id']
 
 
