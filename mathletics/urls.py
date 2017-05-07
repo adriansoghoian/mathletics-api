@@ -19,5 +19,5 @@ from games.views import Games
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-	url(r'^games/$', Games.as_view(), name='games-view'),
+	url(r'^games$', Games.as_view(), name='games-view'),
 ]
