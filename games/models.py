@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.contrib.auth.models import User
 # Create your models here.
 
 
@@ -7,7 +8,7 @@ GAME_TYPE = [("Multiplication 60","multiplication_60"),]
 
 
 class Game(models.Model):
-	user = models.ForeignKey(settings.AUTH_USER_MODEL, default=None)
+	user = models.ForeignKey(User, default=None)
 	create_date = models.DateTimeField(auto_now_add=True)
 	modified_date = models.DateTimeField(auto_now=True)
 	game_type = models.CharField(max_length=200, choices=GAME_TYPE)
